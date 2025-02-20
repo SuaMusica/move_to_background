@@ -10,7 +10,6 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 
@@ -19,15 +18,6 @@ public class MoveToBackgroundPlugin implements FlutterPlugin, MethodCallHandler,
   private static final String CHANNEL_NAME = "move_to_background";
   private MethodChannel channel;
   private static Activity activity;
-
-  /** Plugin registration. */
-  public static void registerWith(Registrar registrar) {
-    if (registrar.activity() != null) {
-      MoveToBackgroundPlugin.activity = registrar.activity();
-    }
-    MoveToBackgroundPlugin plugin = new MoveToBackgroundPlugin();
-    plugin.setupChannel(registrar.messenger(), registrar.context());
-  }
 
   @Override
   @SuppressWarnings("deprecation")
