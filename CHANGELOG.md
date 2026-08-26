@@ -1,3 +1,8 @@
+## 1.0.3
+
+- Add Swift Package Manager support for iOS while retaining CocoaPods support.
+- Update the minimum supported SDK to Flutter 3.44 and Dart 3.12.
+
 ## 1.0.2
 
 - null-safety release

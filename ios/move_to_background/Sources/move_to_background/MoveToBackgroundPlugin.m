@@ -1,4 +1,4 @@
-#import "MoveToBackgroundPlugin.h"
+#import <move_to_background/MoveToBackgroundPlugin.h>
 
 @implementation MoveToBackgroundPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
